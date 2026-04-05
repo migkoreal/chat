@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Zg</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-wrapper">
+
+    <!-- Sidebar esquerda -->
+    <div class="sidebar">
+        <h2>Chat Zg</h2>
+        <div class="section">
+            <h3>Amigos</h3>
+            <ul id="amigosList"></ul>
+        </div>
+        <div class="section">
+            <h3>Servidores</h3>
+            <ul id="servidoresList"></ul>
+        </div>
+    </div>
+
+    <!-- Área principal de chat -->
+    <div class="main-chat">
+        <div class="chat-header">
+            <h3 id="chatHeader">Global</h3>
+            <span id="statusUser"></span>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Mensagens aparecem aqui -->
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="mensagemInput" placeholder="Digite sua mensagem..." onkeydown="if(event.key==='Enter'){enviarMensagem()}">
+            <button onclick="enviarMensagem()">Enviar</button>
+            <input type="file" id="anexoInput" accept="image/*,video/*" onchange="enviarAnexo(this)">
+        </div>
+    </div>
+
+    <!-- Painel direito: perfil do usuário -->
+    <div class="user-panel">
+
+        <!-- Banner -->
+        <div class="user-banner" id="userBanner">
+            <img src="https://i.imgur.com/7kXH0bE.png" alt="Banner" id="bannerImg">
+        </div>
+
+        <!-- Avatar -->
+        <div class="avatar-container">
+            <img id="avatarUser" src="" alt="Avatar">
+        </div>
+
+        <!-- Nome e status -->
+        <h3 id="nomeExibido">Usuário</h3>
+        <span id="statusUser"></span>
+
+        <!-- Bio -->
+        <textarea id="bioInput" placeholder="Escreva sua bio..." onblur="atualizarBio()"></textarea>
+
+        <!-- Status -->
+        <input type="text" id="statusInput" placeholder="Status..." onblur="atualizarStatus()">
+        <button onclick="atualizarStatus()">Atualizar Status</button>
+    </div>
+
+</div>
+
+<script src="chatScript.js"></script>
+</body>
+  </html>
