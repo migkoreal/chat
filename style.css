@@ -1,0 +1,132 @@
+/* ===== Body ===== */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #7289da, #4b4f5e);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
+
+/* ===== Caixa principal ===== */
+.login-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+}
+
+.login-box{
+    background: #2f3136;
+    padding:40px 30px;
+    border-radius:15px;
+    width:90%;
+    max-width:420px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    text-align:center;
+    transition: all 0.5s ease;
+}
+
+/* ===== Título ===== */
+.login-box h1{
+    margin-bottom:25px;
+    font-size:2.5em;
+    color:#fff;
+    letter-spacing:2px;
+}
+
+/* ===== Botões topo ===== */
+.top-buttons{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.top-buttons button{
+    background:none;
+    border:none;
+    padding:12px 25px;
+    margin:0 5px;
+    color:#fff;
+    font-weight:bold;
+    border-bottom:3px solid transparent;
+    cursor:pointer;
+    transition: all 0.4s ease;
+    font-size:1.2em;
+}
+
+.top-buttons button.active{
+    border-bottom:3px solid #7289da;
+}
+
+/* ===== Inputs ===== */
+.form-box input{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    font-size:1.1em;
+    transition: all 0.3s ease;
+}
+
+.form-box input:focus{
+    box-shadow:0 0 10px #7289da;
+}
+
+/* ===== Botões ===== */
+.form-box button{
+    width:100%;
+    padding:15px;
+    background:#7289da;
+    border:none;
+    border-radius:10px;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:1.15em;
+    transition: all 0.3s ease;
+}
+
+.form-box button:hover{
+    background:#5b6eae;
+}
+
+/* ===== Mensagem ===== */
+#mensagem{
+    margin-top:15px;
+    color:#ff6b6b;
+    font-weight:bold;
+    min-height:25px;
+    font-size:1.05em;
+    transition: all 0.3s ease;
+}
+
+/* ===== Fade nos forms ===== */
+.form-box{
+    opacity:1;
+    transition: opacity 0.5s ease;
+}
+
+/* ===== Responsivo celular ===== */
+@media screen and (max-width: 480px){
+    .login-box{
+        padding:30px 20px;
+    }
+    .login-box h1{
+        font-size:2em;
+    }
+    .form-box input, .form-box button{
+        font-size:1em;
+        padding:12px;
+    }
+    .top-buttons button{
+        padding:10px 15px;
+        font-size:1em;
+    }
+  }
